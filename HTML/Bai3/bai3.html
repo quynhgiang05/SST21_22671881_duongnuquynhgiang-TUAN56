@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Change Image</title>
+</head>
+<body>
+    <div class="container">
+        <img id="image" src="../../image/h1.jpg" width="300">
+        <br>
+        <button onclick="play()">Play</button>
+        <button onclick="stop()">Stop</button>
+    </div>
+
+    <script>
+        
+        var images = ["../../image/h1.jpg", "../../image/h2.jpg", "../../image/h3.jpg", "../../image/h4.jpg", "../../image/h5.jpg",
+         "../../image/h6.jpg", "../../image/h7.jpg", "../../image/h8.jpg", "../../image/h9.jpg", "../../image/h10.jpg"];
+        
+         var chuyenAnh;
+                function play() {
+                var index = 0;
+                
+                function thayDoiAnh() {
+                    index = (index + 1) % images.length; 
+                    document.getElementById('image').src = images[index]; 
+                    
+                    chuyenAnh = setTimeout(thayDoiAnh, 1000);
+                }
+                thayDoiAnh();
+            }   
+            function stop() {
+                clearTimeout(chuyenAnh);
+            }
+    </script>
+</body>
+</html>

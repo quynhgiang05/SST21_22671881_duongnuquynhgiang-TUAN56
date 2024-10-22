@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            width: 960px;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <table border="1px">
+            <thead>
+                <tr>
+                    <th colspan="6">Danh sách sinh viên</th>
+                </tr>
+                <tr>
+                    <td colspan="2">MSSV</td>
+                    <td colspan="2">Tên</td>
+                    <td colspan="2">Lớp</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td id="mssv" colspan="2"></td>
+                    <td id="ten" colspan="2"></td>
+                    <td id="lop" colspan="2"></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <script>
+        let mssv=prompt("Moi ban nhap mssv:");
+        let ten=prompt("Moi ban nhap ten:");
+        let lop=prompt("Moi ban nhap lop:");
+
+        var masv=document.getElementById('mssv');
+        var tensv=document.getElementById('ten');
+        var lopsv=document.getElementById('lop');
+
+        masv.innerHTML=mssv;
+        tensv.innerHTML=ten;
+        lopsv.innerHTML=lop;
+    </script>
+</body>
+</html>
